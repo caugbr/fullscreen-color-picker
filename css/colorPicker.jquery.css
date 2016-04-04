@@ -1,0 +1,107 @@
+﻿
+#fs-color-picker {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: #333;
+}
+
+#fs-color-picker > table {
+	width: 100%;
+	height: 100%;
+	background-color: #CCC;
+}
+
+#fs-color-picker > table td.header {
+	height: 34px;
+	line-height: 34px;
+	padding: 0 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+}
+
+#fs-color-picker > table td.stage {
+	padding: 0;
+	margin: 0;
+}
+
+#fs-color-picker > table td.stage > div {
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+}
+
+#fs-color-picker > table td.panel {
+	height: 58px;
+	line-height: 58px;
+	text-align: right;
+	padding: 5px 2px;
+}
+
+#fs-color-picker #color-picker-table {
+	width: 100%;
+	height: 100%;
+}
+
+#color-picker-table tbody td {
+	cursor: pointer;
+	border: 1px solid #ccc;
+	height: 50px;
+}
+
+#color-picker-table tbody td.disabled {
+	cursor: default;
+}
+
+#color-picker-table tbody td.highlighted {
+/* 	border-color: #FFF; */
+	background-image: url(../images/marked-color.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+#fs-color-picker .panel input {
+	width: 6em;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+	padding: 0 6px;
+	margin-right: 2px;
+	vertical-align: middle;
+	box-sizing: border-box;
+}
+#fs-color-picker .panel span {
+	display: inline-block;
+	width: 26px;
+	height: 50px;
+	border: 1px solid #EDEDED;
+	vertical-align: middle;
+	margin-right: 6px;
+}
+#fs-color-picker .panel span.oldcolor {
+	border-width: 1px 0 1px 1px;
+	margin-right: 0px;
+}
+#fs-color-picker .panel span.newcolor {
+	border-width: 1px 1px 1px 0;
+}
+#fs-color-picker .panel a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #CCC;
+	margin: 0 0 0 3px;
+	vertical-align: middle;
+}
+#fs-color-picker .panel a.color-picker-ok {
+	background: #009900 url(../images/ok.png) 50% 50% no-repeat scroll;
+}
+#fs-color-picker .panel a.color-picker-close {
+	background: #E40000 url(../images/cancel.png) 50% 50% no-repeat scroll;
+}

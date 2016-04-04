@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Documento sem título</title>
+
+<style type="text/css">
+.color-picker {
+	background-color:#0C6;
+	padding: 4px 12px;
+	text-decoration: none;
+	cursor: pointer;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="css/colorPicker.jquery.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/colorPicker.jquery.js"></script>
+
+<script>
+
+
+var colors = [
+	"#ff0000","#88cd04","#3300ff","#00b4ff","#fd5118","#272727","#ffcc00","#00a322","#000000","#111111",
+	"#222222","#333333","#444444","#555555","#666666","#777777","#888888","#999999","#aaaaaa","#bbbbbb",
+	"#660000","#7A0000","#8F0000","#A30000","#B80000","#CC0000","#D11919","#D63333","#800000","#990000",
+	"#B20000","#CC0000","#E60000","#FF0000","#FF1919","#FF3333","#801A00","#991F00","#B22400","#CC2900",
+	"#E62E00","#FF3300","#FF4719","#FF5C33","#803300","#993D00","#B24700","#CC5200","#E65C00","#FF6600",
+	"#FF7519","#FF8533","#804C1A","#995C1F","#B26B24","#CC7A29","#E68A2E","#FF9933","#FFA347","#FFAD5C",
+	"#806600","#997A00","#B28F00","#CCA300","#E6B800","#FFCC00","#FFD119","#FFD633","#4C4C00","#666600",
+	"#808000","#999900","#B2B200","#CCCC00","#E6E600","#FFFF00","#3D4C0F","#526614","#66801A","#7A991F",
+	"#8FB224","#A3CC29","#B8E62E","#CCFF33","#4C6600","#5C7A00","#6B8F00","#7AA300","#8AB800","#99CC00",
+	"#A3D119","#ADD633","#293D00","#334C00","#3D5C00","#476B00","#527A00","#5C8A00","#669900","#75A319",
+	"#002E00","#003D00","#004C00","#005C00","#006B00","#007A00","#008A00","#009900","#004C4C","#006666",
+	"#008080","#009999","#00B2B2","#00CCCC","#00E6E6","#00FFFF","#0F3D4C","#145266","#1A6680","#1F7A99",
+	"#248FB2","#29A3CC","#2EB8E6","#33CCFF","#143D66","#1A4C80","#1F5C99","#246BB2","#297ACC","#2E8AE6",
+	"#3399FF","#47A3FF","#001F4C","#002966","#003380","#003D99","#0047B2","#0052CC","#005CE6","#0066FF",
+	"#001A66","#001F7A","#00248F","#0029A3","#002EB8","#0033CC","#00005C","#00006B","#00007A","#00008A",
+	"#000099","#1919A3","#800080","#990099","#B200B2","#CC00CC","#E600E6","#FF00FF","#FF19FF","#660066",
+	"#7A007A","#8F008F","#A300A3","#B800B8","#CC00CC","#D119D1","#4C0066","#5C007A","#6B008F","#7A00A3",
+	"#8A00B8","#9900CC","#A319D1","#3D007A","#47008F","#5200A3","#5C00B8","#6600CC","#7519D1"
+];
+
+$(function() {
+	$('.color-picker').each(function(element, index) {
+		var $this = $(this);
+		$this.fullScreenColorPicker({
+			color: function() { return $('.color-picker').css('background-color'); },
+			//colors: colors,
+			cols: 10,
+			onSelect: function(color) { $('.color-picker').css('background-color', color); }
+		});
+	});
+});
+
+</script>
+</head>
+
+<body>
+
+<a class="color-picker">Color Picker</a>
+
+</body>
+</html>
